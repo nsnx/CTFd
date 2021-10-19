@@ -420,7 +420,7 @@ def oauth_login():
     endpoint = (
         get_app_config("OAUTH_AUTHORIZATION_ENDPOINT")
         or get_config("oauth_authorization_endpoint")
-        or "https://auth.majorleaguecyber.org/oauth/authorize"
+        # or "https://auth.majorleaguecyber.org/oauth/authorize"
     )
 
     if get_config("user_mode") == "teams":
@@ -458,7 +458,7 @@ def oauth_redirect():
         url = (
             get_app_config("OAUTH_TOKEN_ENDPOINT")
             or get_config("oauth_token_endpoint")
-            or "https://auth.majorleaguecyber.org/oauth/token"
+            # or "https://auth.majorleaguecyber.org/oauth/token"
         )
 
         client_id = get_app_config("OAUTH_CLIENT_ID") or get_config("oauth_client_id")
@@ -479,7 +479,7 @@ def oauth_redirect():
             user_url = (
                 get_app_config("OAUTH_API_ENDPOINT")
                 or get_config("oauth_api_endpoint")
-                or "https://api.majorleaguecyber.org/user"
+                # or "https://api.majorleaguecyber.org/user"
             )
 
             headers = {
